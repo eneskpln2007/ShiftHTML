@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is PostgreSQL? Advanced Open Source Relational Database Guide - ShiftHTML</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JavaScript File for Content Pages -->
+    <script src="../../js/icerik.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- HEADER WILL BE LOADED AUTOMATICALLY -->
+    <div id="site-header"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- Breadcrumbs -->
+        <nav class="text-xs text-gray-500 uppercase font-bold mb-4 space-x-2">
+            <a href="../../anasayfalar/B2B_veri_yonetimi.html" class="hover:text-red-600">B2B Data Management</a>
+            <span>/</span>
+            <span class="text-gray-400">PostgreSQL</span>
+        </nav>
+
+        <!-- TWO COLUMN LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- LEFT COLUMN: DETAILED ARTICLE AREA -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">
+                
+                <!-- Article Header Info -->
+                <div class="space-y-4">
+                    <span class="bg-red-50 text-red-600 text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md border border-red-100 inline-block">Object-Relational RDBMS & Advanced Data</span>
+                    <h1 class="text-2xl md:text-4xl font-black text-gray-950 leading-tight">
+                        What is PostgreSQL? Enterprise Object-Relational Database and PostGIS Guide
+                    </h1>
+                    <p class="text-gray-500 text-sm md:text-base leading-relaxed">
+                        We take a deep dive into PostgreSQL, the object-relational open-source database system renowned for scalability, data integrity, JSON support, and geospatial data processing capabilities.
+                    </p>
+                </div>
+
+                <!-- Main Article Image -->
+                <div class="my-6 rounded-xl overflow-hidden h-[300px] md:h-[400px]">
+                    <img src="../../img/PostgreSQL.jfif" class="w-full h-full object-cover" alt="PostgreSQL Enterprise Database Architecture and PostGIS">
+                </div>
+
+                <!-- AD AREA 1 (Article Top Horizontal Banner) -->
+                <div class="w-full bg-gray-50/50 rounded-lg border border-dashed border-gray-200 p-4 mb-6 relative overflow-hidden group">
+                    <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT (1/5)</span>
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded bg-white flex items-center justify-center text-gray-400 border border-gray-200">
+                                <i class="fas fa-ad text-xs"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-black text-gray-600 uppercase tracking-wide block">Article Introduction Ad</span>
+                                <span class="text-[9px] text-gray-400">728 x 90 px / Responsive Flexible Area</span>
+                            </div>
+                        </div>
+                        <div class="w-20 h-6.5 bg-gray-200 rounded animate-pulse"></div>
+                    </div>
+                </div>
+
+                <!-- ARTICLE CONTENT -->
+                <article class="prose max-w-none text-gray-800 text-sm md:text-base leading-relaxed space-y-6">
+                    
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-red-600 mr-2 rounded-sm inline-block"></span>What is PostgreSQL?
+                    </h2>
+                    <p>
+                        As a business or software project grows, the volume of data that needs to be managed also increases. For instance, a company's system may contain thousands or millions of records such as customer information, products, orders, invoices, payments, stock movements, employee records, sales data, and reports.
+                    </p>
+                    <p>
+                        To store this data in an organized manner and access it quickly whenever needed, a robust database system is required. <strong>PostgreSQL steps in at this exact point.</strong>
+                    </p>
+
+                    <!-- Functional Summary Box -->
+                    <div class="p-4 bg-slate-900 border border-slate-800 rounded-lg text-xs md:text-sm text-slate-100 my-4 space-y-3">
+                        <div class="font-bold text-slate-200 flex items-center text-sm">
+                            <i class="fas fa-sitemap mr-2 text-red-500"></i>A PostgreSQL Transaction Cycle (Customer Order):
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-[11px] text-slate-300">
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">1. Customer verification is performed.</div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">2. Order record is created.</div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">3. Products in the order are determined.</div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">4. Stock quantity is updated.</div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">5. Payment information is saved.</div>
+                            <div class="bg-slate-800 p-2 rounded border border-slate-700">6. Order status is updated.</div>
+                        </div>
+                        <p class="text-[11px] text-slate-400 italic">
+                            PostgreSQL stores data within tables and manages the relationships between these tables using high ACID standards, protecting enterprise data in a centralized and orderly system.
+                        </p>
+                    </div>
+
+                    <!-- AD AREA 2 (Mid-Content Banner) -->
+                    <div class="w-full bg-white rounded-lg border border-gray-150 p-4 my-6 relative overflow-hidden group">
+                        <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT (2/5)</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-500">
+                                    <i class="fas fa-database text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-black text-gray-700 uppercase tracking-wide block">High Performance Managed PostgreSQL Cloud</span>
+                                    <span class="text-[9px] text-gray-400">Automatic Scaling, Read Replica, and Instant Snapshot Backups</span>
+                                </div>
+                            </div>
+                            <div class="w-20 h-6.5 bg-gray-200 rounded"></div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-red-600 mr-2 rounded-sm inline-block"></span>Key Features of PostgreSQL
+                    </h2>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">1. Advanced Data Management</h3>
+                    <p>
+                        PostgreSQL goes far beyond storing simple customer or product records. It allows the management of complex data structures and numerous interrelated tables. For instance, in an e-commerce system, multi-layered relationships like <code>Customer → Order → Product → Stock → Payment</code> can be established seamlessly.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">2. Powerful SQL Support</h3>
+                    <p>
+                        PostgreSQL is one of the database systems that support ANSI SQL standards at the highest level. Using SQL, you can:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 pl-2">
+                        <li>Perform data insertion, deletion, and update operations.</li>
+                        <li>Execute advanced filtering and complex JOIN queries.</li>
+                        <li>Build deep analytical reports using Window Functions and CTEs (Common Table Expressions).</li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">3. Data Integrity</h3>
+                    <p>
+                        Ensuring that the information in a database is accurate and consistent is crucial. For example, linking an order to a nonexistent customer or incorrectly calculating stock levels can lead to serious losses. PostgreSQL maintains data integrity at an exceptional level using Foreign Keys, Check Constraints, and Unique constraints.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">4. Transaction Security (ACID Compliance)</h3>
+                    <p>
+                        PostgreSQL manages concurrent data operations (Transactions) with full ACID compliance. If an error occurs during any step of simultaneously reducing stock, writing the order, and saving the payment record, the entire transaction is rolled back, preventing data corruption.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">5. Ability to Work with Large Datasets</h3>
+                    <p>
+                        Thanks to proper Indexing (B-Tree, GIN, GiST, BRIN), Query Optimization, Server Configuration, and Database Partitioning techniques, it maintains its performance even with petabyte-scale enterprise big data.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">6. JSON and NoSQL Data Support</h3>
+                    <p>
+                        One of PostgreSQL's strongest assets is its native support for the <strong>JSONB</strong> data type. It combines the security of relational databases with the flexibility of NoSQL databases into a single system.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">7. Geospatial Data Management (PostGIS)</h3>
+                    <p>
+                        Through the PostGIS extension, it transforms into the world's most advanced geospatial (GIS) database for mapping applications, location services, cargo tracking systems, logistics optimizations, and urban planning software.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">8. Customizable Open Source Architecture</h3>
+                    <p>
+                        It provides developers with an unrestricted infrastructure thanks to custom functions (PL/pgSQL, PL/Python), custom data types, and extensive extension support.
+                    </p>
+
+                    <!-- AD AREA 3 (Banner) -->
+                    <div class="w-full bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200 p-4 my-6 relative overflow-hidden group">
+                        <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT (3/5)</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <i class="fas fa-map-marked-alt text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-black text-gray-600 uppercase tracking-wide block">Geospatial Data Analytics Training with PostGIS</span>
+                                    <span class="text-[9px] text-gray-500">PostgreSQL and Spatial Queries in Location-Based Applications</span>
+                                </div>
+                            </div>
+                            <button class="text-[10px] bg-red-600 text-white font-bold px-3 py-1 rounded">Explore</button>
+                        </div>
+                    </div>
+
+                    <!-- Pros and Cons Comparison Table -->
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-red-600 mr-2 rounded-sm inline-block"></span>Pros and Cons
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                        <div class="bg-green-50/50 p-4 rounded-xl border border-green-100">
+                            <h3 class="font-bold text-green-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle mr-2 text-green-600"></i>Pros
+                            </h3>
+                            <ul class="text-xs space-y-2 text-gray-700">
+                                <li><strong>Open Source & Free:</strong> Can be used in enterprise projects without licensing costs.</li>
+                                <li><strong>Superior Data Integrity:</strong> Full compliance with ACID standards and reliable data management.</li>
+                                <li><strong>Complex Query Success:</strong> High performance in heavy analytics and multi-table JOIN queries.</li>
+                                <li><strong>Advanced Data Types:</strong> JSONB, Array, UUID, and HSTORE support.</li>
+                                <li><strong>High Scalability:</strong> Stability under large data volumes and high traffic.</li>
+                                <li><strong>Rich Extension Ecosystem:</strong> Industry-leading extensions like PostGIS, TimescaleDB, and pgvector.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                            <h3 class="font-bold text-red-900 mb-2 flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2 text-red-600"></i>Cons
+                            </h3>
+                            <ul class="text-xs space-y-2 text-gray-700">
+                                <li><strong>Steep Learning Curve:</strong> Architecture and settings may seem complex for beginners.</li>
+                                <li><strong>Expertise-Required Management:</strong> Vacuuming, index maintenance, and configuration require DBA expertise.</li>
+                                <li><strong>Configuration Sensitivity:</strong> Incorrect configuration leads to inefficient memory and CPU usage.</li>
+                                <li><strong>Overkill for Small Projects:</strong> May feel overly advanced for simple and static websites.</li>
+                                <li><strong>Hardware Requirements:</strong> Growing structures require increased RAM and fast NVMe disks.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- AD AREA 4 (Native Link Banner) -->
+                    <div class="w-full bg-gray-950 text-white rounded-lg p-4 my-6 relative overflow-hidden group">
+                        <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-600 font-bold uppercase tracking-widest">ADVERTISEMENT (4/5)</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded bg-gray-900 flex items-center justify-center text-red-500 border border-gray-800">
+                                    <i class="fas fa-brain text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-black text-gray-200 uppercase tracking-wide block">AI & Vector Database with pgvector</span>
+                                    <span class="text-[9px] text-gray-400">Storing LLM and Search Vectors on PostgreSQL Guide</span>
+                                </div>
+                            </div>
+                            <div class="w-20 h-6.5 bg-gray-800 rounded border border-gray-700 animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-red-600 mr-2 rounded-sm inline-block"></span>Who is PostgreSQL Suitable For?
+                    </h2>
+                    <p>
+                        Ideal for projects with complex data relationships, high reliability requirements, and diverse data needs:
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Software Companies</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Finance & Fintech</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">SaaS Platforms</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Logistics & Mapping</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">E-Commerce Giants</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Data Analytics Projects</div>
+                    </div>
+
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-red-600 mr-2 rounded-sm inline-block"></span>Things to Consider When Using PostgreSQL
+                    </h2>
+                    <ul class="space-y-2 my-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2 text-xs"></i>
+                            <span>Database architecture and table relationships should be properly designed before starting the project.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2 text-xs"></i>
+                            <span>The correct index type (B-Tree, GIN, GiST) must be selected for frequently queried columns (especially JSONB and text fields).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2 text-xs"></i>
+                            <span>Auto-Vacuum processes should be monitored and bloated tables optimized.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2 text-xs"></i>
+                            <span>Role-based authorization should be implemented, granting users only necessary access privileges.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2 text-xs"></i>
+                            <span>Regular and automated backup systems (Point-in-Time Recovery) and a disaster recovery plan must be established.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2 text-xs"></i>
+                            <span>Server RAM, CPU, and disk I/O resources should be tracked using real-time monitoring tools.</span>
+                        </li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <aside class="space-y-6">
+
+                <!-- AD AREA 5 (Right Column Vertical Banner) -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-center h-[260px] flex flex-col justify-center items-center relative overflow-hidden group">
+                    <span class="absolute top-2 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">AD (5/5)</span>
+                    <div class="w-full h-full border-2 border-dashed border-gray-100 rounded-lg flex flex-col items-center justify-center bg-gray-50/50 p-4 transition group-hover:bg-gray-50">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-400 mb-2 border border-gray-100">
+                            <i class="fas fa-server text-xs"></i>
+                        </div>
+                        <span class="text-xs font-black text-gray-500 uppercase tracking-wide">Right Menu Promotion Area</span>
+                        <span class="text-[9px] text-gray-400 mt-0.5">300 x 250 px / Responsive</span>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER WILL BE LOADED AUTOMATICALLY -->
+    <div id="site-footer"></div>
+
+</body>
+</html>

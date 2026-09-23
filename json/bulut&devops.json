@@ -1,0 +1,77 @@
+[
+  {
+    "id": 7,
+    "baslik": "What is Kubernetes? Container Orchestration, Pods, Nodes, and Auto-Scaling Guide",
+    "ozet": "Kubernetes is an open-source container orchestration platform that automates the deployment, management, scaling, and maintenance of applications running in containers. Instead of managing containers individually in large and complex applications, it allows the entire infrastructure to be managed centrally.",
+    "resim": "../img/Kubernetes.png",
+    "link": "../icerik/bulut&devops/Kubernetes.html",
+    "tarih": "2026-08-08T23:29:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 6,
+    "baslik": "What is Docker? Container Technology, Dockerfile, and Image Management Guide",
+    "ozet": "Docker is software that enables applications and all their required dependencies to run in isolated environments called containers. It helps applications running on a developer's computer operate more consistently in testing, server, or cloud environments. Docker is widely used, particularly in DevOps, CI/CD, cloud computing, and software deployment processes.",
+    "resim": "../img/Docker.png",
+    "link": "../icerik/bulut&devops/Docker.html",
+    "tarih": "2026-08-08T23:29:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 5,
+    "baslik": "What is DevOps? CI/CD Automation, Docker, and Infrastructure Management Guide",
+    "ozet": "DevOps is an approach and tool ecosystem that enables software development teams and IT operations teams to work together. DevOps tools help manage code development, testing, version control, application deployment, server management, monitoring, and automation processes within a single workflow. Jenkins, one of the most popular tools in this field, is used specifically to automate CI/CD processes.",
+    "resim": "../img/DevOps.png",
+    "link": "../icerik/bulut&devops/DevOps.html",
+    "tarih": "2026-08-08T23:29:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 4,
+    "baslik": "What is Trello? Kanban-Based Visual Project and Task Management Guide",
+    "ozet": "Trello is project management software that enables teams and individual users to plan and manage their projects, tasks, and workflows via the cloud. Tasks are created as cards and organized within different lists or boards so that the progress stage of works can be easily tracked. It is particularly useful for teamwork, task tracking, project planning, and the visual management of business processes.",
+    "resim": "../img/Trello.png",
+    "link": "../icerik/bulut&devops/Trello.html",
+    "tarih": "2026-08-08T23:29:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 3,
+    "baslik": "What is Salesforce? Cloud-Based CRM and Customer Management Guide",
+    "ozet": "Salesforce is CRM (Customer Relationship Management) software that allows companies to manage customer relationships, sales processes, marketing activities, and customer service over the cloud. Meetings with customers, sales opportunities, quotes, contact information, and customer support processes can be gathered in a single platform, helping companies better understand customers, track sales processes, and increase customer satisfaction.",
+    "resim": "../img/Salesforce.png",
+    "link": "../icerik/bulut&devops/Salesforce.html",
+    "tarih": "2026-08-08T23:29:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 2,
+    "baslik": "What is Google Drive? Cloud Storage and Collaboration Guide",
+    "ozet": "Google Drive is cloud-based storage and file management software that allows files to be stored, organized, shared, and accessed from different devices over the internet. Documents, photos, videos, PDFs, and other files can be kept in a single online environment. One of Google Drive's most important features is its ability to work seamlessly with tools like Google Docs, Google Sheets, and Google Slides, rather than just storing files. This allows users to create, edit, and share documents directly via a web browser.",
+    "resim": "../img/google-drive.jpg",
+    "link": "../icerik/bulut&devops/Google_driver.html",
+    "tarih": "2026-08-08T23:29:00",
+    "kategori": "Cloud Technologies",
+    "kategoriRenk": "text-blue-400",
+    "manset": true
+  },
+  {
+    "id": 1,
+    "baslik": "What is Dropbox? Cloud Storage and File Synchronization",
+    "ozet": "Dropbox is cloud-based software that enables files to be stored on the internet, synchronized, and accessed from different devices. Users can access their files from computers, phones, or tablets, share them with others, and collaborate on the same documents with team members. By keeping files in a cloud environment instead of solely on a computer's hard drive, it offers advantages such as accessibility, file sharing, backups, and teamwork.",
+    "resim": "../img/Dropbox.png",
+    "link": "../icerik/bulut&devops/dropbox.html",
+    "tarih": "2026-08-08T23:14:00",
+    "manset": false
+  }
+]

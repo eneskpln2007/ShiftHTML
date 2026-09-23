@@ -1,0 +1,88 @@
+[
+  {
+    "id": 8,
+    "baslik": "What is Looker Studio? Digital Marketing and Data Visualization Guide",
+    "ozet": "Google Looker Studio is a business intelligence (BI) and data analytics software that allows businesses to combine data from various sources to create interactive reports and dashboards. It is especially used for visualizing marketing, sales, e-commerce, and digital performance data. Thanks to Looker Studio, information gathered from Google Analytics, Google Ads, Google Sheets, BigQuery, and various data sources can be consolidated into a single report, allowing businesses to track their data more easily and evaluate their performance through visual reports.",
+    "resim": "../img/loouker_studio.png",
+    "link": "../icerik/AI&veri_analitigi/Looker_Studio.html",
+    "tarih": "2026-08-08T10:05:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 7,
+    "baslik": "What is Qlik Sense? Relational Data Discovery and Business Intelligence Guide",
+    "ozet": "Qlik Sense is a powerful data analytics and business intelligence (BI) software that enables businesses to analyze, visualize, and turn data from various sources into interactive dashboards. It helps users establish connections between data, discover important trends, and transform complex information into understandable reports. Thanks to Qlik Sense, sales, customer, financial, inventory, production, and operations data can be examined in a single analysis environment, allowing companies not only to view past data but also to make more accurate decisions by discovering relationships between data.",
+    "resim": "../img/qlik.jfif",
+    "link": "../icerik/AI&veri_analitigi/Qlik_Sense.html",
+    "tarih": "2026-08-08T10:05:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 6,
+    "baslik": "What is Tableau? Visual Data Analytics and Business Intelligence Guide",
+    "ozet": "Tableau is a powerful data analytics and business intelligence (BI) software that enables businesses to analyze, visualize, and convert data obtained from various sources into interactive reports. It ensures that complex data tables are easily understood by turning them into charts, maps, gauges, and dashboards. Thanks to Tableau, businesses can examine many different types of data, ranging from sales to customer behavior, and financial results to operational performance, all through a single platform.",
+    "resim": "../img/Tableau.jfif",
+    "link": "../icerik/AI&veri_analitigi/Tableau.html",
+    "tarih": "2026-08-08T10:05:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 5,
+    "baslik": "What is Power BI? Business Intelligence (BI) and Data Visualization Guide",
+    "ozet": "Microsoft Power BI is a data analytics and business intelligence (BI) software that allows businesses to analyze, visualize, and convert data collected from various sources into understandable reports. By combining data from Excel files, databases, ERP systems, CRM platforms, and various online services into a single platform, it provides managers and employees with meaningful insights. Instead of complex tables, company performance can be easily tracked through charts, gauges, reports, and interactive panels thanks to Power BI.",
+    "resim": "../img/Power_BI.png",
+    "link": "../icerik/AI&veri_analitigi/Power_BI.html",
+    "tarih": "2026-08-08T10:05:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 4,
+    "baslik": "Claude: Simplify Complex Tasks with Artificial Intelligence",
+    "ozet": "Claude is an AI-powered assistant software developed by Anthropic that helps perform tasks such as text generation, document analysis, coding, research, summarization, and problem-solving. It has strong use cases, particularly when analyzing long content and working with detailed texts. Companies can use Claude in areas like content production, software development, document review, research, and creating AI solutions to assist employees.",
+    "resim": "../img/Claude.jpg",
+    "link": "../icerik/AI&veri_analitigi/claude.html",
+    "tarih": "2026-08-08T10:05:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 3,
+    "baslik": "Google Gemini: Access Information with Artificial Intelligence",
+    "ozet": "Google Gemini is an AI-powered assistant developed by Google that can work with text, images, files, code, and various data types. It can be used in many different areas such as information research, content creation, coding, document analysis, idea generation, and speeding up daily tasks. When used alongside the Google ecosystem, it helps users access information and execute various tasks faster.",
+    "resim": "../img/gemini.png",
+    "link": "../icerik/AI&veri_analitigi/gemini.html",
+    "tarih": "2026-08-08T10:05:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 2,
+    "baslik": "GitHub Copilot: Accelerate Your Coding",
+    "ozet": "GitHub Copilot is an AI-powered software development tool that assists software developers while writing code. It can generate code suggestions, write functions, explain existing code, help troubleshoot errors, and enable developers to produce software faster. It particularly helps developers save time when creating long and repetitive code blocks.",
+    "resim": "../img/GitHub_Copilot.jfif",
+    "link": "../icerik/AI&veri_analitigi/github_copilot.html",
+    "tarih": "2026-08-08T10:01:00",
+    "kategori": "Cloud Technologies",
+    "kategoriRenk": "text-blue-400",
+    "manset": true
+  },
+  {
+    "id": 1,
+    "baslik": "ChatGPT: Bring Artificial Intelligence to the Center of Your Business",
+    "ozet": "ChatGPT is an AI software that enables users to perform tasks such as generating text, researching information, developing ideas, writing code, analyzing data, producing content, and accelerating various business processes with artificial intelligence support. Alongside individual users, it can also be utilized by companies in areas such as customer service, content creation, software development, analysis, and automation. The primary purpose of ChatGPT is to communicate naturally with the user, understand given instructions, and produce appropriate results accordingly.",
+    "resim": "../img/chatgpt.jpeg",
+    "link": "../icerik/AI&veri_analitigi/chatgpt.html",
+    "tarih": "2026-08-08T09:57:00",
+    "manset": false
+  }
+]

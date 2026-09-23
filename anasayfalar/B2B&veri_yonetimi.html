@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiftHTML - B2B & Data Management</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Our Combiner JavaScript Code -->
+    <script src="../js/gerekli-kodlar.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- HEADER WILL COME HERE AUTOMATICALLY -->
+    <div id="site-header"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- Category Title -->
+        <div class="border-b border-gray-200 pb-5 mb-6">
+            <h1 class="text-3xl font-black text-gray-900 uppercase tracking-tight flex items-center">
+                <span class="w-2 h-8 bg-red-600 inline-block mr-3 rounded-sm"></span>B2B & Data Management
+            </h1>
+        </div>
+
+        <!-- FEATURED CATEGORY HEADLINES (DYNAMIC) -->
+        <section id="manset-konteyner" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"></section>
+
+        <!-- TWO COLUMN LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- LEFT COLUMN: DYNAMIC LIST CARDS + ADS -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- Dynamic News Feed -->
+                <div id="haber-konteyner" class="space-y-6"></div>
+
+                <!-- PAGINATION -->
+                <nav id="sayfalama-konteyner" class="flex justify-center items-center space-x-1 pt-6"></nav>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <aside class="space-y-6">
+
+                <!-- SIDEBAR AD AREA -->
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center h-[280px] flex flex-col justify-center items-center relative overflow-hidden group">
+                    <span class="absolute top-2 right-2 text-[8px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT</span>
+                    <div class="w-full h-full border-2 border-dashed border-gray-200 rounded flex flex-col items-center justify-center bg-gray-50/50 p-4 transition group-hover:bg-gray-50">
+                        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-400 mb-2 border border-gray-200">
+                            <i class="fas fa-image text-lg"></i>
+                        </div>
+                        <span class="text-xs font-black text-gray-400 uppercase tracking-wider">Vertical Ad Panel</span>
+                        <span class="text-[10px] text-gray-400 mt-1">300 x 250 px / Responsive</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- FOOTER WILL COME HERE AUTOMATICALLY -->
+    <div id="site-footer"></div>
+
+    <!-- DYNAMIC JSON LOADING SCRIPT -->
+    <script>
+        const PAGE_SIZE = 20;
+        let currentPage = 1;
+        let haberListesi = [];
+
+        // Time Calculator (e.g., 2 hours ago)
+        function zamanAkisiniHesapla(tarihStr) {
+            const simdi = new Date();
+            const haberTarihi = new Date(tarihStr);
+            const farkSaniye = Math.floor((simdi - haberTarihi) / 1000);
+
+            if (isNaN(haberTarihi.getTime())) return tarihStr;
+
+            if (farkSaniye < 60) return "Just now";
+            const farkDakika = Math.floor(farkSaniye / 60);
+            if (farkDakika < 60) return `${farkDakika} minutes ago`;
+            const farkSaat = Math.floor(farkDakika / 60);
+            if (farkSaat < 24) return `${farkSaat} hours ago`;
+            const farkGun = Math.floor(farkSaat / 24);
+            if (farkGun < 30) return `${farkGun} days ago`;
+            const farkAy = Math.floor(farkGun / 30);
+            if (farkAy < 12) return `${farkAy} months ago`;
+            const farkYil = Math.floor(farkAy / 12);
+            return `${farkYil} years ago`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Fetching data only from B2B&veri_yonetimi.json file
+            fetch('../json/B2B&veri_yonetimi.json')
+                .then(res => res.json())
+                .then(data => {
+                    // Sort Content from Newest to Oldest by Date
+                    haberListesi = data.sort((a, b) => new Date(b.tarih) - new Date(a.tarih));
+
+                    renderMansetler();
+                    renderPage(1);
+                })
+                .catch(err => console.error("JSON Loading Error:", err));
+        });
+
+        // Headlines Area (displays the first 2 news items with manset: true)
+        function renderMansetler() {
+            const mansetKonteyner = document.getElementById('manset-konteyner');
+            mansetKonteyner.innerHTML = '';
+
+            const mansetler = haberListesi.filter(item => item.manset === true).slice(0, 2);
+
+            mansetler.forEach(item => {
+                const mansetCard = document.createElement('div');
+                mansetCard.className = "relative group overflow-hidden rounded-lg shadow-sm bg-black h-64 border border-gray-100";
+                
+                const kategoriRenk = item.kategoriRenk || "text-red-500";
+                const kategori = item.kategori || "B2B & Data Management";
+
+                mansetCard.innerHTML = `
+                    <img src="${item.resim}" alt="${item.baslik}" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black via-black/90 to-transparent">
+                        <span class="${kategoriRenk} text-xs font-bold uppercase tracking-wider block mb-1">${kategori}</span>
+                        <h2 class="text-white text-lg font-bold leading-snug">
+                            <a href="${item.link}" class="hover:underline">${item.baslik}</a>
+                        </h2>
+                    </div>
+                `;
+                mansetKonteyner.appendChild(mansetCard);
+            });
+        }
+
+        // Feed Content and Ad Cards
+        function renderPage(page) {
+            currentPage = page;
+            const container = document.getElementById('haber-konteyner');
+            container.innerHTML = '';
+
+            const start = (page - 1) * PAGE_SIZE;
+            const end = start + PAGE_SIZE;
+            const currentItems = haberListesi.slice(start, end);
+
+            currentItems.forEach((item, index) => {
+                // Add an ad every 4 cards
+                if (index > 0 && index % 4 === 0) {
+                    container.appendChild(createAdBanner());
+                }
+
+                const dinamikTarih = zamanAkisiniHesapla(item.tarih);
+
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-lg shadow-sm overflow-hidden flex flex-col sm:flex-row border border-gray-100 hover:shadow-md transition";
+                card.innerHTML = `
+                    <div class="sm:w-1/3 h-44 relative overflow-hidden">
+                        <img src="${item.resim}" alt="${item.baslik}" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 sm:w-2/3 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 hover:text-red-600 transition leading-snug">
+                                <a href="${item.link}">${item.baslik}</a>
+                            </h3>
+                            <p class="text-gray-600 text-xs mt-2 line-clamp-2">${item.ozet}</p>
+                        </div>
+                        <div class="text-[11px] text-gray-400 mt-3 flex items-center space-x-2 font-medium">
+                            <span><i class="far fa-clock mr-1"></i> ${dinamikTarih}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            renderPagination();
+        }
+
+        // Pagination
+        function renderPagination() {
+            const nav = document.getElementById('sayfalama-konteyner');
+            nav.innerHTML = '';
+
+            const totalPages = Math.ceil(haberListesi.length / PAGE_SIZE);
+            if (totalPages <= 1) return;
+
+            if (currentPage > 1) {
+                nav.innerHTML += `
+                    <button onclick="renderPage(${currentPage - 1}); window.scrollTo({top:0, behavior:'smooth'});" class="px-3 py-2 bg-white border border-gray-200 text-gray-500 rounded-lg hover:bg-gray-50 text-sm font-medium">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>`;
+            }
+
+            for (let i = 1; i <= totalPages; i++) {
+                const activeStyle = (i === currentPage) 
+                    ? "bg-red-600 text-white font-bold" 
+                    : "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 font-medium";
+              
+                nav.innerHTML += `
+                    <button onclick="renderPage(${i}); window.scrollTo({top:0, behavior:'smooth'});" class="px-4 py-2 rounded-lg text-sm ${activeStyle}">
+                        ${i}
+                    </button>`;
+            }
+
+            if (currentPage < totalPages) {
+                nav.innerHTML += `
+                    <button onclick="renderPage(${currentPage + 1}); window.scrollTo({top:0, behavior:'smooth'});" class="px-3 py-2 bg-white border border-gray-200 text-gray-500 rounded-lg hover:bg-gray-50 text-sm font-medium">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>`;
+            }
+        }
+
+        // Inter-content Ad Template
+        function createAdBanner() {
+            const ad = document.createElement('div');
+            ad.className = "w-full bg-white rounded-lg shadow-sm border border-gray-100 p-4 relative overflow-hidden group";
+            ad.innerHTML = `
+                <span class="absolute top-2 right-3 text-[8px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT AREA</span>
+                <div class="border-2 border-dashed border-gray-200 rounded p-4 bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded bg-gray-100 flex items-center justify-center text-gray-400 border border-gray-200">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-black text-gray-500 uppercase tracking-wide block">In-Feed Advertisement Area</span>
+                            <span class="text-[10px] text-gray-400">728 x 90 px or Responsive Layout</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            return ad;
+        }
+    </script>
+</body>
+</html>

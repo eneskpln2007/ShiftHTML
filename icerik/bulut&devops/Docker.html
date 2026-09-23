@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Docker? Container Technology, Dockerfile and Image Management Guide - ShiftHTML</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JS File For Content Pages -->
+    <script src="../../js/icerik.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- HEADER WILL COME HERE AUTOMATICALLY -->
+    <div id="site-header"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- Breadcrumbs -->
+        <nav class="text-xs text-gray-500 uppercase font-bold mb-4 space-x-2">
+            <a href="../../anasayfalar/cloud_devops.html" class="hover:text-red-600">Cloud & DevOps</a>
+            <span>/</span>
+            <span class="text-gray-400">Docker</span>
+        </nav>
+
+        <!-- TWO COLUMN LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- LEFT COLUMN: DETAILED ARTICLE AREA -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">
+                
+                <!-- Article Header Info -->
+                <div class="space-y-4">
+                    <span class="bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md border border-blue-100 inline-block">Container Technologies & Isolation</span>
+                    <h1 class="text-2xl md:text-4xl font-black text-gray-950 leading-tight">
+                        What is Docker? Container Technology, Dockerfile, Image and Microservice Guide
+                    </h1>
+                    <p class="text-gray-500 text-sm md:text-base leading-relaxed">
+                        We examine the Docker container ecosystem, which eliminates software development environments and server dependencies by isolating them, putting an end to the "It worked on my machine" problem.
+                    </p>
+                </div>
+
+                <!-- Main Article Image -->
+                <div class="my-6 rounded-xl overflow-hidden h-[300px] md:h-[400px]">
+                    <img src="../../img/Docker.png" class="w-full h-full object-cover" alt="Docker Container Technology and Virtualization">
+                </div>
+
+                <!-- AD AREA 1 (Article Start Horizontal Banner) -->
+                <div class="w-full bg-gray-50/50 rounded-lg border border-dashed border-gray-200 p-4 mb-6 relative overflow-hidden group">
+                    <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT (1/5)</span>
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded bg-white flex items-center justify-center text-gray-400 border border-gray-200">
+                                <i class="fas fa-ad text-xs"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-black text-gray-600 uppercase tracking-wide block">Article Introduction Ad</span>
+                                <span class="text-[9px] text-gray-400">728 x 90 px / Responsive Flexible Area</span>
+                            </div>
+                        </div>
+                        <div class="w-20 h-6.5 bg-gray-200 rounded animate-pulse"></div>
+                    </div>
+                </div>
+
+                <!-- ARTICLE CONTENT -->
+                <article class="prose max-w-none text-gray-800 text-sm md:text-base leading-relaxed space-y-6">
+                    
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-blue-600 mr-2 rounded-sm inline-block"></span>What is Docker?
+                    </h2>
+                    <p>
+                        When software is developed, source codes alone may not be enough for the application to run smoothly. The application requires a specific programming language version, libraries, database, system tools, environment variables, and custom configurations.
+                    </p>
+                    <p>
+                        For example, an application running on a developer's computer may crash when moved to a server due to a different operating system kernel, Python/Node.js version, or a missing library. <strong>Docker packages the application together with all its dependencies into a lightweight "Container" to eliminate this problem.</strong>
+                    </p>
+
+                    <!-- Architecture Formula Box -->
+                    <div class="p-4 bg-slate-900 border border-slate-800 rounded-lg text-xs md:text-sm text-slate-100 my-4 space-y-3">
+                        <div class="font-bold text-slate-200 flex items-center text-sm">
+                            <i class="fab fa-docker mr-2 text-blue-400 text-base"></i>Docker Container Packaging Formula:
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded font-mono text-blue-300 text-center text-xs md:text-sm border border-slate-700">
+                            Application Code + Libraries + Dependencies + Configuration ➔ Docker Container
+                        </div>
+                        <p class="text-[11px] text-slate-400 italic">
+                            This created container package can be run identically on a developer laptop, test server, or cloud infrastructure in milliseconds.
+                        </p>
+                    </div>
+
+                    <!-- AD AREA 2 (In-Content Banner) -->
+                    <div class="w-full bg-white rounded-lg border border-gray-150 p-4 my-6 relative overflow-hidden group">
+                        <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT (2/5)</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-500">
+                                    <i class="fab fa-docker text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-black text-gray-700 uppercase tracking-wide block">High Performance Docker & Kubernetes Cloud Servers</span>
+                                    <span class="text-[9px] text-gray-400">Instant Setup, SSD Infrastructure and Isolated Container Resources</span>
+                                </div>
+                            </div>
+                            <div class="w-20 h-6.5 bg-gray-200 rounded"></div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-blue-600 mr-2 rounded-sm inline-block"></span>Key Features of Docker
+                    </h2>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">1. Container Technology</h3>
+                    <p>
+                        Docker's primary role is to create containers that provide logical isolation. In a web project, the Web Application, MySQL database, Redis cache, and Nginx web server can run in separate containers, managed independently without affecting each other.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">2. Docker Image Structure</h3>
+                    <p>
+                        Template packages used to create containers are called <strong>Images</strong>. An image houses the operating system layer, application codes, and dependencies. Thousands of ready-made images like Python, Node.js, Ubuntu, MySQL, and Nginx can be downloaded via Docker Hub.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">3. Defining Custom Templates with Dockerfile</h3>
+                    <p>
+                        It is a text file specifying how the application will be compiled from scratch and how the container environment will be set up. Which base image to use, which ports to open, and which dependencies to install are coded step-by-step inside the Dockerfile.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">4. Multi-Container Management with Docker Compose</h3>
+                    <p>
+                        In projects where multiple containers need to work together (e.g., <code>Web + DB + Redis + Nginx</code>), the entire microservice architecture is orchestrated through a single <code>docker-compose.yml</code> file.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">5. Easy and Standard Deployment</h3>
+                    <p>
+                        The developer creates the image and pushes it to a Registry (Docker Hub, AWS ECR, etc.). The server pulls this image and takes the new version live in seconds. Manual server setup steps are completely eliminated.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mt-4 mb-2">6. DevOps and CI/CD Integration</h3>
+                    <p>
+                        In Jenkins, GitHub Actions, and GitLab CI/CD systems, code scanning and automated tests are run directly inside transient Docker containers.
+                    </p>
+
+                    <!-- AD AREA 3 (Banner) -->
+                    <div class="w-full bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200 p-4 my-6 relative overflow-hidden group">
+                        <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">ADVERTISEMENT (3/5)</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <i class="fas fa-server text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-black text-gray-600 uppercase tracking-wide block">Kubernetes & Docker Container Orchestration</span>
+                                    <span class="text-[9px] text-gray-500">Auto-Scaling and Load Balanced Cloud Architectures</span>
+                                </div>
+                            </div>
+                            <button class="text-[10px] bg-blue-600 text-white font-bold px-3 py-1 rounded">Explore</button>
+                        </div>
+                    </div>
+
+                    <!-- Pros and Cons Comparison Table -->
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-blue-600 mr-2 rounded-sm inline-block"></span>Pros and Cons
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                        <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-900 mb-2 flex items-center">
+                                <i class="fas fa-check-circle mr-2 text-blue-600"></i>Pros
+                            </h3>
+                            <ul class="text-xs space-y-2 text-gray-700">
+                                <li><strong>Environment Standardization:</strong> Ends the "It worked on my machine" crisis.</li>
+                                <li><strong>Lightning Fast Startup:</strong> Boots up in seconds compared to virtual machines.</li>
+                                <li><strong>Low Resource Consumption:</strong> Saves RAM and CPU by sharing the operating system kernel.</li>
+                                <li><strong>Full Portability:</strong> Moves seamlessly from local computers to cloud servers.</li>
+                                <li><strong>Easy Scaling:</strong> Can be scaled instantly from 1 container to 10 containers according to needs.</li>
+                                <li><strong>Microservice Compatibility:</strong> Allows services to be developed independently of each other.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50/50 p-4 rounded-xl border border-red-100">
+                            <h3 class="font-bold text-red-900 mb-2 flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2 text-red-600"></i>Cons
+                            </h3>
+                            <ul class="text-xs space-y-2 text-gray-700">
+                                <li><strong>Learning Curve:</strong> Requires mastery of terms like Dockerfile, Volume, Network, and Registry.</li>
+                                <li><strong>Orchestration Complexity:</strong> With hundreds of containers, additional tools like Kubernetes become mandatory.</li>
+                                <li><strong>Data Persistence:</strong> Requires Volume configuration to prevent data loss when a container is deleted.</li>
+                                <li><strong>Security Risk:</strong> Using untrusted images or incorrect root privileges can create vulnerabilities.</li>
+                                <li><strong>Complex Network Management:</strong> Virtual network configuration between containers requires meticulousness.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- AD AREA 4 (Native Link Banner) -->
+                    <div class="w-full bg-gray-950 text-white rounded-lg p-4 my-6 relative overflow-hidden group">
+                        <span class="absolute top-1.5 right-2.5 text-[7px] text-gray-600 font-bold uppercase tracking-widest">ADVERTISEMENT (4/5)</span>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded bg-gray-900 flex items-center justify-center text-blue-400 border border-gray-800">
+                                    <i class="fas fa-box text-xs"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-black text-gray-200 uppercase tracking-wide block">Docker Volume & Persistent Storage Solutions</span>
+                                    <span class="text-[9px] text-gray-400">High-Speed Persistent Storage and Backup Systems for Databases</span>
+                                </div>
+                            </div>
+                            <div class="w-20 h-6.5 bg-gray-800 rounded border border-gray-700 animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-blue-600 mr-2 rounded-sm inline-block"></span>Who is Docker Suitable For?
+                    </h2>
+                    <p>
+                        Docker is ideal for all software ecosystems aiming for fast development, environment isolation, and smooth deployment:
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Software Developers</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">DevOps Teams</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">SaaS Companies</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Microservice Architectures</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">Cloud-Based Projects</div>
+                        <div class="p-3 bg-gray-50 border border-gray-100 rounded-lg text-center text-xs font-bold text-gray-700">CI/CD & Test Automation</div>
+                    </div>
+
+                    <h2 class="text-xl font-black text-gray-950 mt-8 mb-3 flex items-center">
+                        <span class="w-1 h-5 bg-blue-600 mr-2 rounded-sm inline-block"></span>Things to Consider When Using Docker
+                    </h2>
+                    <ul class="space-y-2 my-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>Official and reliable Docker images should be used, and regular security updates should be applied.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>Unnecessary packages should not be added to keep the image size small, and the `.dockerignore` file should be actively used.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>Sensitive information (API passwords, database credentials) should never be embedded into the Dockerfile or Image, but managed via environment variables (ENV).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>In systems requiring data persistence like databases, <strong>Docker Volume</strong> or Bind Mount must be used to prevent data loss.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>Containers should be run with restricted user privileges instead of default root privileges.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>Unused, stopped containers and unnecessary leftover images (dangling images) should be cleaned regularly (<code>docker system prune</code>).</span>
+                        </li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SIDEBAR -->
+            <aside class="space-y-6">
+
+                <!-- AD AREA 5 (Right Column Vertical Banner) -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200 text-center h-[260px] flex flex-col justify-center items-center relative overflow-hidden group">
+                    <span class="absolute top-2 right-2.5 text-[7px] text-gray-400 font-bold uppercase tracking-widest">AD (5/5)</span>
+                    <div class="w-full h-full border-2 border-dashed border-gray-100 rounded-lg flex flex-col items-center justify-center bg-gray-50/50 p-4 transition group-hover:bg-gray-50">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-400 mb-2 border border-gray-100">
+                            <i class="fab fa-docker text-xs"></i>
+                        </div>
+                        <span class="text-xs font-black text-gray-500 uppercase tracking-wide">Right Menu Promo Area</span>
+                        <span class="text-[9px] text-gray-400 mt-0.5">300 x 250 px / Responsive</span>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER WILL COME HERE AUTOMATICALLY -->
+    <div id="site-footer"></div>
+
+</body>
+</html>

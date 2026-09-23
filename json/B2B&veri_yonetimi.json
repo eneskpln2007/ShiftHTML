@@ -1,0 +1,90 @@
+[
+  {
+    "id": 8,
+    "baslik": "What is MongoDB? Flexible NoSQL Document Database and BSON Guide",
+    "ozet": "MongoDB is an open-source NoSQL database management software that allows data to be stored as documents instead of classic rows and columns in tables. Thanks to its flexible data structure, scalability, and ability to be used in applications requiring high performance, it is preferred for websites, mobile applications, e-commerce platforms, SaaS applications, and large-scale digital projects.",
+    "resim": "../img/MongoDB.jfif",
+    "link": "../icerik/B2B&veri_yonetimi/MongoDB.html",
+    "tarih": "2026-08-08T08:43:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 7,
+    "baslik": "What is PostgreSQL? Advanced Open Source Relational Database Guide",
+    "ozet": "PostgreSQL is an advanced open-source relational database management system that enables businesses and software developers to securely, orderly, and efficiently store and manage large amounts of data. Thanks to its complex data structures, powerful querying features, and reliability, it is used in many different areas ranging from enterprise applications to web platforms.",
+    "resim": "../img/PostgreSQL.jfif",
+    "link": "../icerik/B2B&veri_yonetimi/PostgreSQL.html",
+    "tarih": "2026-08-08T08:43:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 6,
+    "baslik": "What is MySQL? Open Source Database and Web Technologies Guide",
+    "ozet": "MySQL is a popular relational database management system used by websites, mobile applications, e-commerce platforms, and enterprise software. It ensures that data is stored, queried, updated, and managed in an organized manner. Thanks to its open-source nature and wide usage area, it is preferred for both small projects and large-scale applications.",
+    "resim": "../img/MySQL.jfif",
+    "link": "../icerik/B2B&veri_yonetimi/MySQL.html",
+    "tarih": "2026-08-08T08:43:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 5,
+    "baslik": "What is Microsoft SQL Server? Enterprise Database and Data Management Guide",
+    "ozet": "Microsoft SQL Server is a powerful database management software that allows businesses to store, organize, query, and analyze large amounts of data on a centralized system. Especially used in ERP, CRM, e-commerce, accounting, and enterprise applications, SQL Server helps manage data securely, orderly, and quickly.",
+    "resim": "../img/Microsoft_SQL_Server.png",
+    "link": "../icerik/B2B&veri_yonetimi/Microsoft_SQL.html",
+    "tarih": "2026-08-08T08:43:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 4,
+    "baslik": "HRM Software: Manage Your Employees from a Single Center, Digitalize Human Resources",
+    "ozet": "HRM (Human Resource Management) is B2B software that enables businesses to manage employee information, leaves, salaries, recruitment, performance, and personnel processes through a single platform. By reducing manual human resources operations, it helps companies manage their employees more orderly, quickly, and efficiently.",
+    "resim": "../img/HRM_Yazilimi.jfif",
+    "link": "../icerik/B2B&veri_yonetimi/HRM_Yazilimi.html",
+    "tarih": "2026-08-08T08:43:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 3,
+    "baslik": "Project Management Software: Unite Your Teams on a Single Platform",
+    "ozet": "Project management software is B2B software that allows businesses to manage their projects, tasks, employees, time schedules, and progress status through a single platform. It facilitates task sharing among teams, ensures tracking of project processes, and reduces delay risks.",
+    "resim": "../img/proje-yonetimi-yazilimi.png",
+    "link": "../icerik/B2B&veri_yonetimi/Proje_Yönetimi_Yazilimi.html",
+    "tarih": "2026-08-08T08:43:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 2,
+    "baslik": "CRM Software: Strengthen Customer Relations, Boost Your Sales",
+    "ozet": "CRM (Customer Relationship Management) is a B2B software that enables businesses to manage all communication processes with their existing and potential customers through a single platform. By centralizing customer information, sales opportunities, quotation processes, tasks, and support tickets into a single system, it helps teams work more efficiently. CRM software increases customer satisfaction while accelerating sales processes and enabling businesses to build stronger customer relationships.",
+    "resim": "../img/CRM_Yazilimi.png",
+    "link": "../icerik/B2B&veri_yonetimi/CRM_Yazilimi.html",
+    "tarih": "2026-08-07T10:40:00",
+    "kategori": "Entrepreneurship",
+    "kategoriRenk": "text-red-500",
+    "manset": true
+  },
+  {
+    "id": 1,
+    "baslik": "ERP Software: Manage Your Company from a Single Center",
+    "ozet": "ERP (Enterprise Resource Planning) is B2B software that consolidates a business's accounting, finance, human resources, inventory, production, procurement, sales, and customer processes under a single system. By allowing different departments to work on the same data, it reduces error rates, speeds up business processes, and provides real-time reports to managers.",
+    "resim": "../img/ERP_Yazilimi.jpg",
+    "link": "../icerik/B2B&veri_yonetimi/ERP_Yazilimi.html",
+    "tarih": "2026-08-07T10:30:00",
+    "kategori": "Cloud Technologies",
+    "kategoriRenk": "text-blue-400",
+    "manset": true
+  }
+]
